@@ -1,0 +1,151 @@
+# TextSimplify Configuration File
+# Customize settings for text simplification and accessibility features
+
+# ==============================================================================
+# SIMPLIFICATION SETTINGS
+# ==============================================================================
+
+# Enable/disable individual simplification techniques
+simplification.lexical_enabled=true
+simplification.redundancy_enabled=true
+simplification.sentence_splitting_enabled=true
+simplification.voice_conversion_enabled=true
+
+# Complexity threshold (0-100) for applying all techniques
+# Sentences above this threshold get aggressive simplification
+simplification.complexity_threshold=50
+
+# Sentence length threshold (words) - sentences exceeding this may be split
+simplification.sentence_split_threshold=20
+
+
+# ==============================================================================
+# ANALYSIS SETTINGS
+# ==============================================================================
+
+# Readability grade level mapping
+# Used to classify text difficulty
+analysis.grade_level_elementary=20
+analysis.grade_level_intermediate=35
+analysis.grade_level_advanced=50
+analysis.grade_level_very_advanced=70
+
+# Ideal sentence metrics (used in complexity calculations)
+analysis.ideal_sentence_length_min=15
+analysis.ideal_sentence_length_max=20
+analysis.ideal_word_length=5
+analysis.ideal_syllables_per_word=1.8
+
+
+# ==============================================================================
+# TEXT-TO-SPEECH SETTINGS
+# ==============================================================================
+
+# Default speech rate (words per minute)
+# Range: 50-300, typical: 100-200
+tts.rate=150
+
+# Volume level (0.0-1.0)
+tts.volume=1.0
+
+# Voice index (0=default system voice, 1=alternative, etc.)
+tts.voice_index=0
+
+# Output audio format (wav, mp3)
+tts.output_format=wav
+
+# Whether to automatically generate audio output
+tts.auto_generate=false
+
+
+# ==============================================================================
+# INPUT/OUTPUT SETTINGS
+# ==============================================================================
+
+# Supported input formats (comma-separated)
+input.formats=txt,docx,pdf
+
+# Default input encoding
+input.encoding=utf-8
+
+# Generate output files
+output.save_simplified_text=true
+output.save_readability_report=true
+output.save_audio=false
+
+# Output directory path (leave empty to use current directory)
+output.directory=./results/
+
+# Output file naming convention
+output.simplified_suffix=_simplified
+output.report_suffix=_readability_report
+output.audio_suffix=_audio
+
+
+# ==============================================================================
+# CLEANING SETTINGS
+# ==============================================================================
+
+# Remove tabs and replace with spaces
+cleaning.remove_tabs=true
+
+# Remove multiple consecutive spaces
+cleaning.normalize_spaces=true
+
+# Normalize line endings (CRLF -> LF)
+cleaning.normalize_line_endings=true
+
+# Fix spacing around punctuation
+cleaning.fix_punctuation_spacing=true
+
+# Remove control characters
+cleaning.remove_control_chars=true
+
+
+# ==============================================================================
+# LOGGING & DEBUG
+# ==============================================================================
+
+# Log level (DEBUG, INFO, WARNING, ERROR)
+logging.level=INFO
+
+# Show progress indicators
+logging.show_progress=true
+
+# Verbose output
+logging.verbose=false
+
+# Save log file
+logging.save_log=false
+logging.log_file=./logs/textsimplify.log
+
+
+# ==============================================================================
+# PERFORMANCE SETTINGS
+# ==============================================================================
+
+# Enable parallel processing (if applicable)
+performance.parallel_processing=false
+
+# Cache analysis results
+performance.cache_analysis=true
+
+# Maximum text length to process (characters, 0=unlimited)
+performance.max_text_length=0
+
+
+# ==============================================================================
+# ACCESSIBILITY SETTINGS
+# ==============================================================================
+
+# Minimum complexity reduction target (percentage)
+accessibility.min_complexity_reduction=20
+
+# Target grade level for simplified text
+accessibility.target_grade_level=6
+
+# Add line breaks between paragraphs
+accessibility.preserve_paragraph_breaks=true
+
+# Add spacing between sentences for readability
+accessibility.add_sentence_spacing=true

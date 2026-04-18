@@ -1,0 +1,1 @@
+This is a writing inside a text file. This text is just for experiment with my Offline Text simplifier and read-aloud

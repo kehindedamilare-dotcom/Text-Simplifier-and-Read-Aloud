@@ -1,0 +1,12 @@
+# Core Dependencies
+python-docx>=1.0.0
+pdfminer.six>=20221105
+pyttsx3>=2.90
+
+# Testing Dependencies
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development Tools (optional)
+black>=23.0.0
+flake8>=6.0.0
